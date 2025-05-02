@@ -83,3 +83,49 @@ let details : SoftwareDeveloper = {
 }
 
 console.log(details)
+
+//function 
+function sum(a:number,b:number){
+    return a+b;
+}
+
+let num = sum(2,3);
+// console.log(num)
+
+//generics 
+function sum1(a:number,b:number){
+    return a+b;
+}
+
+function addTwoStr(str1:string,str2:string):string{
+    return str1+str2;
+}
+
+let str = addTwoStr("saugat","giri")
+// console.log(str);
+
+function addTwoBool(first:boolean,second:boolean){
+    return first && second;
+}
+
+function addJPani1<T>(data1:T,data2:T){
+    console.log("haha");
+}
+addJPani1<string>("saugat","giri")
+addJPani1<number>(1,2);
+
+function addJPani2<T,U>(data1:T,data2:U){
+    console.log("haha");
+}
+
+addJPani2<string,number>("saugat",1);
+
+interface Data<T,U>{
+    first:T,
+    second:U
+}
+
+let data:Data<string,number> = {
+    first : "ssaugat",
+    second : 123
+}
